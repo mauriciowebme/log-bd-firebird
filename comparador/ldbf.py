@@ -12,8 +12,6 @@ from email import encoders
 import zipfile
 import smtplib
 
-from requests import delete
-
 def Cria_tutorial():
     if os.path.exists(f'{path_arq}\\tutorial.txt') == False:
         tutorial = open(f'{path_arq}\\tutorial.txt', 'w', encoding='utf8')
@@ -300,7 +298,7 @@ if "__main__" in __name__:
         path_arq = os.path.dirname(sys.executable)
     elif __file__:
         path_arq = os.path.dirname(__file__)
+    Cria_tutorial()
     global dados_config
     dados_config = Pega_conf()
-    Cria_tutorial()
     main()
