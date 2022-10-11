@@ -301,4 +301,5 @@ if "__main__" in __name__:
     Cria_tutorial()
     global dados_config
     dados_config = Pega_conf()
+    #Enviaemail(assunto='teste', destinatarios=dados_config['email_destinatario'], anexos=[], html='teste')
     main()
